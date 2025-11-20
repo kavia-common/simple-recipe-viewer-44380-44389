@@ -19,6 +19,23 @@
     >
       <div class="card-title">{{ recipe.title }}</div>
       <p class="card-desc">{{ recipe.description }}</p>
+
+      <!-- Time/Servings Badge Section -->
+      <div class="card-meta-row" *ngIf="recipe.prepTime || recipe.cookTime || getTotalTime(recipe) || recipe.servings">
+        <span class="badge" *ngIf="recipe.prepTime">
+          Prep: <strong>{{ recipe.prepTime }}</strong> min
+        </span>
+        <span class="badge" *ngIf="recipe.cookTime">
+          Cook: <strong>{{ recipe.cookTime }}</strong> min
+        </span>
+        <span class="badge badge-total" *ngIf="getTotalTime(recipe)">
+          Total: <strong>{{ getTotalTime(recipe) }}</strong> min
+        </span>
+        <span class="badge badge-servings" *ngIf="recipe.servings">
+          Servings: <strong>{{ recipe.servings }}</strong>
+        </span>
+      </div>
+
       <div class="card-tags" *ngIf="recipe.tags?.length">
         <span *ngFor="let tag of recipe.tags" class="tag">{{ tag }}</span>
       </div>

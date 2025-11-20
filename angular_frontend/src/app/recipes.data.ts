@@ -27,6 +27,9 @@ export const RECIPES: Recipe[] = [
       'Pour 1/4 cup batter for each pancake. Cook until bubbles form, then flip and cook until golden brown.',
       'Serve hot with maple syrup.'
     ],
+    prepTime: 10,
+    cookTime: 15,
+    servings: 4,
     tags: ['breakfast', 'vegetarian', 'American']
   },
   {
@@ -48,6 +51,9 @@ export const RECIPES: Recipe[] = [
       'Spread mashed avocado on toast, top with a poached egg.',
       'Sprinkle red pepper flakes if desired and serve immediately.'
     ],
+    prepTime: 5,
+    cookTime: 8,
+    servings: 2,
     tags: ['breakfast', 'healthy', 'vegetarian', 'quick']
   },
   {
@@ -72,6 +78,9 @@ export const RECIPES: Recipe[] = [
       'Stir in egg-cheese mixture rapidly, adding pasta water to create a creamy sauce.',
       'Season with salt and pepper, garnish with parsley, and serve.'
     ],
+    prepTime: 12,
+    cookTime: 18,
+    servings: 3,
     tags: ['Italian', 'pasta', 'comfort food']
   },
   {
@@ -97,6 +106,9 @@ export const RECIPES: Recipe[] = [
       'Cook for 2 more minutes, tossing to coat.',
       'Serve hot with steamed rice or noodles.'
     ],
+    prepTime: 10,
+    cookTime: 8,
+    servings: 2,
     tags: ['Asian', 'vegan', 'healthy', 'quick']
   },
   {
@@ -124,6 +136,9 @@ export const RECIPES: Recipe[] = [
       'Add tomato sauce, simmer for 10 min. Stir in cream and chicken.',
       'Cook for 5 more minutes. Season, garnish with cilantro and serve with rice or naan.'
     ],
+    prepTime: 15,
+    cookTime: 30,
+    servings: 4,
     tags: ['Indian', 'chicken', 'comfort food', 'gluten-free']
   },
   {
@@ -148,6 +163,9 @@ export const RECIPES: Recipe[] = [
       'Pour dressing over salad, toss gently.',
       'Serve chilled.'
     ],
+    prepTime: 12,
+    cookTime: 0,
+    servings: 2,
     tags: ['Mediterranean', 'salad', 'vegetarian', 'healthy']
   },
   {
@@ -172,6 +190,9 @@ export const RECIPES: Recipe[] = [
       'Drizzle extra sauce over cooked salmon.',
       'Serve salmon atop steamed rice, sprinkle with green onions and sesame seeds.'
     ],
+    prepTime: 8,
+    cookTime: 15,
+    servings: 2,
     tags: ['Asian', 'seafood', 'healthy']
   },
   {
@@ -196,6 +217,9 @@ export const RECIPES: Recipe[] = [
       'Simmer covered for 30–35 minutes until lentils are tender.',
       'Stir in lemon juice, adjust seasoning, and serve hot.'
     ],
+    prepTime: 10,
+    cookTime: 35,
+    servings: 4,
     tags: ['vegetarian', 'vegan', 'soup', 'gluten-free']
   },
   {
@@ -222,6 +246,9 @@ export const RECIPES: Recipe[] = [
       'Add noodles, pad thai sauce, shrimp, and bean sprouts. Toss to combine.',
       'Serve topped with peanuts, lime, and cilantro.'
     ],
+    prepTime: 12,
+    cookTime: 15,
+    servings: 2,
     tags: ['Asian', 'seafood', 'Thai']
   },
   {
@@ -246,6 +273,9 @@ export const RECIPES: Recipe[] = [
       'Sprinkle with cumin and cheese.',
       'Top with salsa and chopped cilantro just before serving.'
     ],
+    prepTime: 8,
+    cookTime: 10,
+    servings: 2,
     tags: ['Mexican', 'vegetarian', 'gluten-free', 'bowl']
   },
   {
@@ -269,6 +299,9 @@ export const RECIPES: Recipe[] = [
       'Grill or pan-fry beef over high heat until browned and caramelized.',
       'Sprinkle with sesame seeds and serve with steamed rice.'
     ],
+    prepTime: 25,
+    cookTime: 12,
+    servings: 3,
     tags: ['Korean', 'beef', 'Asian']
   },
   {
@@ -291,6 +324,9 @@ export const RECIPES: Recipe[] = [
       'Microwave on high for 90 seconds (do not overcook).',
       'Top with whipped cream if desired, and serve warm.'
     ],
+    prepTime: 3,
+    cookTime: 2,
+    servings: 1,
     tags: ['dessert', 'quick', 'vegetarian', 'single-serve']
   }
 ];

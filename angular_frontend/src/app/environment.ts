@@ -1,5 +1,5 @@
 /*
- * Environment file is not required in src/app/.
- * API base should be read from window.env or .env variables.
- * The fallback reads NG_APP_API_BASE in RecipeService instead.
+ * All recipe data is now fetched only from in-memory RECIPES array (see recipe.service.ts).
+ * This file is not used to influence the RecipeService. 
+ * To re-enable API-based recipe loading, update RecipeService and restore config usage.
  */

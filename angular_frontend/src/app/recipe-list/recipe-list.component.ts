@@ -21,12 +21,7 @@ export class RecipeListComponent {
   ngOnInit() {
     // Debug logging to confirm recipes input is received
     console.log('RecipeListComponent ngOnInit, input recipes:', this.recipes);
-    if (!this.recipes || this.recipes.length === 0) {
-      // Add placeholder for debug
-      this.filtered = [{ id: 'debug2', title: 'No recipes to display', ingredients: [], instructions: [], description: 'Placeholder (check RecipeListPageComponent and RecipeService)', tags: ['debug'] }];
-    } else {
-      this.filtered = this.recipes;
-    }
+    this.filtered = this.recipes || [];
   }
 
   // PUBLIC_INTERFACE
@@ -36,6 +31,20 @@ export class RecipeListComponent {
       r.title.toLowerCase().includes(term) ||
       (r.tags ? r.tags.join(' ').toLowerCase().includes(term) : false)
     );
+  }
+
+  /**
+   * Computes total time if either prepTime or cookTime exists.
+   */
+  // PUBLIC_INTERFACE
+  getTotalTime(recipe: Recipe): number | undefined {
+    if (
+      typeof recipe.prepTime === 'number' ||
+      typeof recipe.cookTime === 'number'
+    ) {
+      return (recipe.prepTime || 0) + (recipe.cookTime || 0);
+    }
+    return undefined;
   }
 
   // PUBLIC_INTERFACE

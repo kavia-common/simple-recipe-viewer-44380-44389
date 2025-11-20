@@ -66,9 +66,43 @@
   color: #111827;
   margin-bottom: 0.4rem;
 }
+
+/* BEGIN BADGE STYLES */
+.card-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.6rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(90deg, #2563EB22 60%, #f9fafb 100%);
+  color: #2563EB;
+  font-size: 0.90rem;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.17em 0.76em 0.15em 0.52em;
+  margin-right: 0.14em;
+  margin-bottom: 0.10em;
+  box-shadow: 0 2px 8px #2563eb12;
+}
+
+.badge-total {
+  background: linear-gradient(90deg, #F59E0B22 60%, #f9fafb 100%);
+  color: #F59E0B;
+}
+
+.badge-servings {
+  background: linear-gradient(90deg, #16a34a22 70%, #f9fafb 100%);
+  color: #16A34A;
+}
+
 .card-tags {
   margin-top: auto;
 }
+
 .tag {
   display: inline-block;
   background: #F59E0B22;
@@ -78,10 +112,13 @@
   border-radius: 12px;
   margin-right: 0.3em;
   box-shadow: 0 2px 8px #f59e0b12;
+  margin-top: 0.25em;
 }
+
 .no-results {
   margin-top: 3rem;
   color: #EF4444;
   font-weight: 500;
   text-align: center;
 }
+/* END BADGE STYLES */
