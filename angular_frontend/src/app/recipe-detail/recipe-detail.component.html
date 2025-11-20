@@ -1,0 +1,22 @@
+<div *ngIf="recipe as r" class="recipe-detail-card">
+  <h2>{{ r.title }}</h2>
+  <p class="desc">{{ r.description }}</p>
+  <div class="ingredients-block">
+    <h3>Ingredients</h3>
+    <ul>
+      <li *ngFor="let ing of r.ingredients">{{ ing }}</li>
+    </ul>
+  </div>
+  <div class="instructions-block">
+    <h3>Instructions</h3>
+    <ol>
+      <li *ngFor="let ins of r.instructions">{{ ins }}</li>
+    </ol>
+  </div>
+  <div class="tags" *ngIf="r.tags?.length">
+    <span *ngFor="let tag of r.tags" class="tag">{{ tag }}</span>
+  </div>
+</div>
+<div *ngIf="!recipe" class="not-found">
+  <span>Recipe not found.</span>
+</div>

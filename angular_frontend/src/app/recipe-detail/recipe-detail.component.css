@@ -1,0 +1,57 @@
+.recipe-detail-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #2563eb12;
+  padding: 2.2rem 2.5rem;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+h2 {
+  color: #2563EB;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.desc {
+  color: #111827;
+  font-size: 1.08rem;
+  margin-bottom: 1rem;
+}
+
+.ingredients-block h3,
+.instructions-block h3 {
+  color: #2563EB;
+  font-size: 1.14rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+ul, ol {
+  padding-left: 1.3em;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.tags {
+  margin-top: 1.1rem;
+}
+.tag {
+  display: inline-block;
+  background: #F59E0B22;
+  color: #F59E0B;
+  font-size: 0.88rem;
+  padding: 0.22em 0.64em;
+  border-radius: 12px;
+  margin-right: 0.32em;
+  margin-top: 0.4em;
+  box-shadow: 0 2px 8px #f59e0b12;
+}
+
+.not-found {
+  color: #EF4444;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 4rem;
+}

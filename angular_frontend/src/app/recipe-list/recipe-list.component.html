@@ -1,0 +1,28 @@
+<div class="recipe-list-wrapper">
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search recipes..."
+      [(ngModel)]="searchTerm"
+      (input)="filterRecipes()"
+      aria-label="Search recipes"
+    />
+  </div>
+  <div class="recipe-cards">
+    <div
+      *ngFor="let recipe of filtered"
+      class="recipe-card"
+      (click)="viewRecipe(recipe)"
+      tabindex="0"
+      role="button"
+      [attr.aria-label]="'View recipe ' + recipe.title"
+    >
+      <div class="card-title">{{ recipe.title }}</div>
+      <p class="card-desc">{{ recipe.description }}</p>
+      <div class="card-tags" *ngIf="recipe.tags?.length">
+        <span *ngFor="let tag of recipe.tags" class="tag">{{ tag }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="no-results" *ngIf="filtered.length === 0">No recipes found.</div>
+</div>

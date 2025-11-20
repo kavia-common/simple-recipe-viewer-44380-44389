@@ -1,0 +1,18 @@
+.app-header {
+  width: 100%;
+  background: linear-gradient(90deg, #2563EB 10%, #f9fafb 100%);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.05);
+  border-radius: 0 0 16px 16px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  min-height: 4rem;
+}
+.app-title {
+  color: #2563EB;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  text-shadow: 0 2px 8px #f9fafb80;
+}
