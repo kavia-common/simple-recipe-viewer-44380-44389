@@ -1,4 +1,5 @@
-export const ENV = {
-  NG_APP_API_BASE: (typeof process !== 'undefined' && process.env && process.env['NG_APP_API_BASE']) || '',
-  NG_DEBUG: true // minimal debug export to help confirm environment usage
-};
+/*
+ * Environment file is not required in src/app/.
+ * API base should be read from window.env or .env variables.
+ * The fallback reads NG_APP_API_BASE in RecipeService instead.
+ */
