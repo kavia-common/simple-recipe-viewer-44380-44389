@@ -1,2 +1,5 @@
 <app-header></app-header>
 <app-recipe-list [recipes]="recipes"></app-recipe-list>
+<div *ngIf="!recipes || recipes.length === 0" style="text-align:center;color:gray;font-style:italic;padding:2rem;">
+  No recipes loaded (debug placeholder). Check RecipeService, environment variables, and recipes.data.ts.
+</div>

@@ -17,8 +17,20 @@ export class RecipeListPageComponent {
   constructor(private recipeService: RecipeService) {}
 
   ngOnInit() {
+    // Minimal logging for debug: confirm service is called
+    console.log('RecipeListPageComponent ngOnInit');
     this.recipeService.getRecipes().subscribe(r => {
       this.recipes = r;
+      console.log('Fetched recipes:', r);
+      // Add placeholder to visually confirm loading and fallback: if empty, inject dummy content for debug
+      if (!this.recipes || this.recipes.length === 0) {
+        console.warn('No recipes found. Using placeholder for debug.');
+        this.recipes = [{ id: 'debug', title: 'No recipes available', ingredients: [], instructions: [], description: 'Check RecipeService fallback and recipes.data.ts', tags: ['debug'] }];
+      }
+    }, err => {
+      console.error('Failed to fetch recipes:', err);
+      // Fallback: show error content in preview
+      this.recipes = [{ id: 'error', title: 'Error loading recipes', ingredients: [], instructions: [], description: 'See error log above', tags: ['error'] }];
     });
   }
 }

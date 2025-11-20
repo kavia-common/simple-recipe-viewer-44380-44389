@@ -15,9 +15,17 @@ export class RecipeService {
   getRecipes(): Observable<Recipe[]> {
     // Try API if configured, else fallback
     if (this.apiUrl) {
+      console.log('RecipeService: using API', this.apiUrl);
       return this.http.get<Recipe[]>(`${this.apiUrl}/recipes`);
     } else {
-      return of(RECIPES);
+      console.log('RecipeService: using in-memory RECIPES fallback');
+      // Defensive fallback: ensure RECIPES exists
+      if (Array.isArray(RECIPES) && RECIPES.length) {
+        return of(RECIPES);
+      } else {
+        console.warn('RecipeService: RECIPES fallback is empty');
+        return of([{ id: 'debug3', title: 'RECIPES fallback empty', ingredients: [], instructions: [], description: 'Check recipes.data.ts', tags: ['debug'] }]);
+      }
     }
   }
 

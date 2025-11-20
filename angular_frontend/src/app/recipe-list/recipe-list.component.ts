@@ -19,7 +19,14 @@ export class RecipeListComponent {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.filtered = this.recipes;
+    // Debug logging to confirm recipes input is received
+    console.log('RecipeListComponent ngOnInit, input recipes:', this.recipes);
+    if (!this.recipes || this.recipes.length === 0) {
+      // Add placeholder for debug
+      this.filtered = [{ id: 'debug2', title: 'No recipes to display', ingredients: [], instructions: [], description: 'Placeholder (check RecipeListPageComponent and RecipeService)', tags: ['debug'] }];
+    } else {
+      this.filtered = this.recipes;
+    }
   }
 
   // PUBLIC_INTERFACE
